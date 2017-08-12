@@ -1,0 +1,20 @@
+body {
+  #wrapper {
+    #content-wrap {
+      .inner {
+        footer {
+          p#copyright {
+            font-size: 1em;
+            margin-top: 5em;
+            margin-bottom: 2em;
+            text-align: center;
+
+            span {
+              color: #e993c4;
+            }
+          }
+        }
+      }
+    }
+  }
+}
