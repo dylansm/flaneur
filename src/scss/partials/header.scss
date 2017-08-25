@@ -1,6 +1,6 @@
 header.main {
   background: $header-bg;
-  border-bottom: 1px solid rgba(206, 207, 203, 0);
+  border-bottom: 1px solid $header-border-none;
   transition: border-color $timing;
 
   .inner {
@@ -23,7 +23,7 @@ header.main {
       padding-top: .5em;
 
       a {
-        color: #e993c4;
+        color: $pink;
       }
     }
   }
@@ -31,7 +31,7 @@ header.main {
 
 #wrapper.fixed {
   header.main {
-    border-bottom: 1px solid rgba(206, 207, 203, 0.50);
+    border-bottom: 1px solid $header-border-vis;
     position: fixed;
     top: -22px;
     width: 100%;
@@ -39,9 +39,6 @@ header.main {
   }
 }
 
-// body.nav-open #wrapper .inner {
-  // transform: translate3d(-180px, 0, 0);
-// }
 #wrapper.nav-open .inner {
   transform: translate3d(-180px, 0, 0);
 }
@@ -50,7 +47,7 @@ header.main {
   cursor: pointer;
   height: 60px;
   margin-top: .2em;
-  margin-right: -8px;
+  margin-right: -6px;
   position: relative;
   transform: scale(.5);
   transition: .5s ease-in-out;

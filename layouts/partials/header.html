@@ -10,7 +10,7 @@
     <meta property="og:url" content="{{ .Permalink }}">
     <meta property="og:description" content="{{ if isset .Params "description" }}{{ .Description }}. {{ end }}{{ .Site.Params.Description }}">
     <meta property="og:type" content="website" />
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/styles.css">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/styles.css" media="all">
     <link href="https://fonts.googleapis.com/css?family=Alegreya|Montserrat" rel="stylesheet">
     <script src="https://use.fontawesome.com/97134e2509.js"></script>
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/atom-one-dark.css">
@@ -20,13 +20,28 @@
     <title>{{ .Title }}{{ if eq .IsHome false }} | {{ .Site.Title }}{{ end }}</title>
   </head>
   <body>
-    <div id="wrapper">
+    <div id="wrapper"{{ if isset .Params "slug" }} class="{{ .Params.Slug }}"{{ end }}>
       <header class="main">
         <div class="inner">
-          <h1>
+          <h1 id="site-title">
             <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
           </h1>
-          <div id="burger-button">
+
+          <div class="print-only" id="header-contact">
+            <span>
+              <script type="text/javascript">document.write(
+                "<n uers=\"gry:+15032221442\">503-222-1442<\057n>".replace(/[a-zA-Z]/g, function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
+              </script>
+            </span>
+            <!-- <a href="mailto:hello@dylansmith.com">hello@dylansmith.com</a> -->
+            <span>
+              <script type="text/javascript">document.write(
+                "<n uers=\"znvygb:uryyb\100qlynafzvgu\056pbz\">uryyb\100qlynafzvgu\056pbz<\057n>".replace(/[a-zA-Z]/g, function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
+              </script>
+            </span>
+          </div>
+
+          <div id="burger-button" class="screen-only">
             <span></span>
             <span></span>
             <span></span>

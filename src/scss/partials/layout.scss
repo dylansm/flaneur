@@ -1,12 +1,43 @@
 body {
   background: $bg;
-  color: #625956;
-  color: #666;
+  color: $lt-brown;
   margin: 0;
   padding: 0;
 
   a {
     text-decoration: none;
+  }
+
+  hr {
+    border: 0;
+    border-bottom: 1px solid $pink;
+    margin: 2em auto 3.25em auto;
+    max-width: 70%;
+    text-align: center;
+
+    @include ie11 {
+      margin: 3em auto 3em auto;
+    }
+
+    &:before {
+      content: '';
+      background-color: #F6F8F4;
+      background-image: url(../images/electric2.svg);
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-size: 90%;
+      padding: 20px 50px 20px 50px;
+      display: inline-block;
+      margin-bottom: -25px;
+
+      @include ie11 {
+        display: none;
+      }
+    }
+  }
+
+  &.lockbox {
+    overflow: hidden;
   }
 
   #wrapper {
@@ -82,8 +113,18 @@ body {
           margin-top: 1.5em;
         }
 
-        li {
-          margin: 0 auto;
+        ul {
+          list-style: none;
+          padding-left: 0;
+
+          li {
+            margin: 0 auto 0 .9em;
+            text-indent: -.8em;
+
+            &:before {
+              content: '•\00a0\00a0';
+            }
+          }
         }
 
         header.content {
@@ -124,6 +165,23 @@ body {
           margin-top: 3em;
         }
 
+        p > img {
+          width: 100%;
+        }
+
+        figure.post-image {
+          margin: 0;
+
+          img {
+            width: 100%;
+          }
+
+          figcaption {
+            font: 1em "Alegreya", serif;
+            text-align: center;
+          }
+        }
+
       }
     }
 
@@ -134,5 +192,169 @@ body {
         }
       }
     }
+
+    // wrapper.resume
+    &.resume {
+      #content-wrap {
+        .inner {
+          #logos {
+            display: flex;
+            align-content: center;
+            justify-content: space-between;
+            margin-top: 1.5em;
+
+            @include ie11 {
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+              text-align: center;
+              vertical-align: top;
+
+              img {
+                padding-left: 1em;
+                padding-right: 1em;
+              }
+            }
+          }
+
+          .date-title {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+
+            h4 {
+              margin-top: .2em;
+            }
+
+            h4.title {
+              margin-left: 0;
+
+              span.location {
+                text-transform: none;
+              }
+
+              span.description {
+                display: block;
+                font-family: "Alegreya", serif;
+                font-size: .98em;
+                font-weight: normal;
+                padding-top: .19em;
+                text-transform: none;
+              }
+            }
+
+            h4.date {
+              margin-right: 0;
+              margin-top: 0;
+              text-transform: none;
+            }
+          }
+
+          .education {
+            h4 {
+              margin-top: .5em;
+
+              span.location {
+                text-transform: none;
+              }
+
+              span.description {
+                display: block;
+                font-family: "Alegreya", serif;
+                font-size: .98em;
+                text-transform: none;
+              }
+            }
+          }
+        }
+      }
+
+      .date-title + ul {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.print-only {
+  display: none;
+}
+
+@media print {
+  @page { margin: 0; }
+  body {
+    font-size: 70%;
+    margin: .25in .35in .5in .35in;
+  }
+  body, header.main {
+    background-color: transparent !important;
+  }
+
+  body {
+    #wrapper.resume {
+      #logos {
+        img {
+          max-height: .5in;
+          max-width: .5in;
+        }
+      }
+      p + h3 {
+        margin-top: .8em !important
+      }
+    }
+    #wrapper.fixed {
+      header.main {
+        border: none;
+        position: static;
+        margin-top: -1.52in;
+      }
+
+      #content-wrap {
+        margin-top: 0in;
+      }
+    }
+  }
+
+  #content-wrap {
+    margin-top: -.6in;
+
+    .inner {
+      padding-top: 0in;
+    }
+  }
+  .screen-only {
+    display: none;
+  }
+
+  .print-only {
+    display: block;
+  }
+
+  h1#site-title {
+    margin-top: 0;
+
+    a {
+      color: #625956;
+    }
+  }
+
+  #header-contact {
+    font-size: 110%;
+    left: .12in;
+    position: absolute;
+    top: .5in;
+
+    span {
+      padding-right: .25in;
+
+      a {
+        border-bottom: 0 !important;
+        color: #625956 !important;
+      }
+    }
+  }
+
+  p#copyright {
+    display: none;
   }
 }

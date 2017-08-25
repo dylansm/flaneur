@@ -1,13 +1,15 @@
 {{ partial "header.html" . }}
 
   <header class="content">
-    <h1>{{ .Title }}</h1>
+    <h1{{ if isset .Params "screenonlytitle" }} class="screen-only"{{ end }}>{{ .Title }}</h1>
     {{ if isset .Params "description" }}
     <h2>{{ .Description }}</h2>
     {{ end }}
     {{ partial "post_date.html" . }}
   </header>
+  <article class="single">
   {{ .Content }}
   {{ partial "post_meta.html" . }}
+  </article>
 
 {{ partial "footer.html" . }}

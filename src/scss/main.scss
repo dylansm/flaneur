@@ -1,3 +1,4 @@
+@import './mixins/ie';
 @import './mixins/media_queries';
 @import './partials/typography';
 @import './partials/variables';
@@ -6,3 +7,4 @@
 @import './partials/navigation';
 @import './partials/pagination';
 @import './partials/footer';
+@import './partials/lockbox';

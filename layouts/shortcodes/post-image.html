@@ -1,0 +1,10 @@
+<figure class="post-image">
+  <img
+  alt="Post Image"
+  sizes="(min-width: 722px) 60vw, 100vw"
+  srcset="/images/sm/{{ .Get "src" }} 640w,
+          /images/md/{{ .Get "src" }} 1280w,
+          /images/lg/{{ .Get "src" }} 2560w"
+          src="/images/md/{{ .Get "src" }}" title="{{ .Get "caption" }}">
+  <figcaption>{{ .Get "caption" }}</figcaption>
+</figure>
