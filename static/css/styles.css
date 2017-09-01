@@ -53,10 +53,10 @@ body {
       transition: transform 250ms ease-out; }
       body #wrapper #content-wrap .inner a {
         color: #3a4c58;
-        border-bottom: 1px solid #999; }
+        border-bottom: 1px solid #3a4c58; }
       body #wrapper #content-wrap .inner h1 a, body #wrapper #content-wrap .inner h2 a, body #wrapper #content-wrap .inner h3 a, body #wrapper #content-wrap .inner h4 a, body #wrapper #content-wrap .inner h5 a, body #wrapper #content-wrap .inner h6 a, body #wrapper #content-wrap .inner footer a, body #wrapper #content-wrap .inner nav a {
         color: #3a4c58;
-        border-bottom: 1px none #999; }
+        border-bottom: 1px none #3a4c58; }
       body #wrapper #content-wrap .inner h1 {
         font-size: 1.9em;
         margin: 1.75em auto .2em auto; }
