@@ -1,4 +1,16 @@
 // small screen size (sm)
+@mixin xs {
+  @media (min-width: 1px) {
+    @content;
+  }
+}
+
+@mixin xs-within-limit {
+  @media (min-width: 331px) and (max-width: 401px) {
+    @content;
+  }
+}
+
 @mixin sm {
   @media (min-width: 576px) {
     @content;

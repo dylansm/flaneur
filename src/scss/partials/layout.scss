@@ -63,6 +63,8 @@ body {
         transform: translate3d(0, 0, 0);
         transition: transform $timing;
 
+
+
         a {
           color: rgba(58, 76, 88, 1.00);
           border-bottom: 1px solid #999;
@@ -170,9 +172,10 @@ body {
         }
 
         figure.post-image {
-          margin: 0;
+          margin: 0 0 2em 0;
 
           img {
+            border: 2px solid $nomad;
             width: 100%;
           }
 
@@ -200,8 +203,65 @@ body {
           #logos {
             display: flex;
             align-content: center;
-            justify-content: space-between;
-            margin-top: 1.5em;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            // margin-left: 15%;
+            // margin-right: 15%;
+            margin-top: 1.3em;
+            margin-bottom: 1.3em;
+
+            @include xs-within-limit {
+              margin-left: 10%;
+              margin-right: 10%;
+            }
+
+            @include sm {
+              margin-left: auto;
+              margin-right: auto;
+            }
+
+            img {
+              max-height: 2.5em;
+              max-width: 5em;
+              margin-top: 1em;
+              margin-bottom: 1em;
+              padding-left: 1.8em;
+              padding-right: 1.8em;
+
+              &:nth-child(11) {
+                padding-left: 1.1em;
+                padding-right: 2.7em;
+              }
+
+              @include sm {
+                &:nth-child(11) {
+                  padding-left: 1.8em;
+                  padding-right: 1.8em;
+                }
+              }
+
+              @media screen and (min-width: 564px) and (max-width: 688px) {
+                padding-left: 1em;
+                padding-right: 1em;
+              }
+
+              @include md {
+                margin-top: 0;
+                margin-bottom: 0;
+              }
+
+              &:first-child, &:nth-child(2) { // nike logo, normal and black
+                max-width: 4.25em;
+                padding-right: .5em;
+              }
+
+              @include xs {
+                &.tall {
+                  padding-right: 2.25em;
+                }
+              }
+            }
 
             @include ie11 {
               display: block;
@@ -209,12 +269,8 @@ body {
               margin-right: auto;
               text-align: center;
               vertical-align: top;
-
-              img {
-                padding-left: 1em;
-                padding-right: 1em;
-              }
             }
+
           }
 
           .date-title {
@@ -251,6 +307,10 @@ body {
           }
 
           .education {
+            h3 {
+              margin-top: 1em;
+            }
+
             h4 {
               margin-top: .5em;
 
@@ -281,47 +341,101 @@ body {
 }
 
 @media print {
-  @page { margin: 0; }
+  @page :first { margin: 0; }
+
   body {
-    font-size: 70%;
+    color: #000;
+    font-size: 73%;
     margin: .25in .35in .5in .35in;
+
+    &:not(:root:root) { // hack for Safari only / not Chrome
+      font-size: 67.5%;
+      margin: .25in .1in .5in .1in;
+    }
   }
+
   body, header.main {
     background-color: transparent !important;
   }
 
   body {
-    #wrapper.resume {
-      #logos {
-        img {
-          max-height: .5in;
-          max-width: .5in;
-        }
-      }
-      p + h3 {
-        margin-top: .8em !important
-      }
-    }
-    #wrapper.fixed {
-      header.main {
-        border: none;
-        position: static;
-        margin-top: -1.52in;
+    #wrapper {
+      &:not(.resume) {
+        margin-left: .25in;
+        margin-right: .25in;
       }
 
       #content-wrap {
-        margin-top: 0in;
+        margin-top: -.6in;
+
+        .inner {
+          &:not(:root:root) {
+            padding-top: .4in;
+          }
+
+          h1 {
+            margin-top: 4em;
+          }
+        }
+      }
+
+      &.nav-open {
+        .inner { // header
+          transform: translate3d(0, 0, 0);
+        }
+
+        #content-wrap {
+          .inner {
+            transform: translate3d(0, 0, 0);
+          }
+        }
+      }
+
+      &.resume {
+        #logos {
+          img {
+            max-height: .5in;
+            max-width: .5in;
+          }
+        }
+
+        p + h3 {
+          margin-top: .6em !important;
+        }
+
+        div.education:not(:root:root) {
+          margin-top: 0em;
+
+          h3 {
+            margin-top: -1em;
+          }
+        }
+      }
+
+      &.fixed {
+        header.main {
+          border: none;
+          position: static;
+          margin-top: -1.52in;
+        }
+
+        #content-wrap {
+          margin-top: 0in;
+
+          .inner {
+            &:not(:root:root) {
+              margin-top: -.25in;
+              padding-top: 0 !important;
+            }
+          }
+        }
       }
     }
   }
 
-  #content-wrap {
-    margin-top: -.6in;
+  // #content-wrap {
+  // }
 
-    .inner {
-      padding-top: 0in;
-    }
-  }
   .screen-only {
     display: none;
   }
@@ -333,8 +447,12 @@ body {
   h1#site-title {
     margin-top: 0;
 
+    &:not(:root:root) {
+      margin-top: -1em;
+    }
+
     a {
-      color: #625956;
+      color: #000;
     }
   }
 
@@ -344,14 +462,24 @@ body {
     position: absolute;
     top: .5in;
 
+    &:not(:root:root) {
+      top: .3in;
+    }
+
     span {
       padding-right: .25in;
 
       a {
         border-bottom: 0 !important;
-        color: #625956 !important;
+        color: #000 !important;
       }
     }
+  }
+
+  hr:before {
+    content: '';
+    background-color: transparent !important;
+    background-image: none !important;
   }
 
   p#copyright {

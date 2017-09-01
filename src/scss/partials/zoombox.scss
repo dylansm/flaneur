@@ -1,4 +1,10 @@
-div#lockbox {
+figure.zoombox {
+  img {
+    cursor: pointer;
+  }
+}
+
+div#zoombox {
   background-color: rgba(30, 30, 30, 0);
   display: flex;
   align-items: center;
@@ -10,7 +16,7 @@ div#lockbox {
   width: 100%;
   z-index: 10;
 
-  body.lockbox & {
+  body.zoombox & {
     background-color: rgba(30, 30, 30, .95);
     pointer-events: all;
 
@@ -37,12 +43,18 @@ div#lockbox {
     figure.post-image {
       margin: 0 10px;
 
+      &.zoombox {
+        img {
+          cursor: default;
+        }
+      }
+
       img {
         opacity: 0;
         transition: opacity $timing;
         width: 100%;
 
-        body.lockbox & {
+        body.zoombox & {
           opacity: 1;
         }
       }

@@ -1,10 +1,10 @@
 import throttle from 'lodash/throttle'
-import Lockbox from './js/lockbox'
+import Zoombox from './js/zoombox'
 import { clickTouch } from './js/utils'
 import './scss/main.scss'
 import './images/favicon.ico'
 
-const lockbox = new Lockbox()
+const zoombox = new Zoombox()
 const header = document.getElementsByTagName('header')[0]
 const wrapper = document.getElementById('wrapper')
 const burger = document.getElementById('burger-button')
@@ -37,3 +37,4 @@ function onScroll () {
   const docTop = (document.body.scrollTop || document.documentElement.scrollTop)
   docTop > 21 ? wrapper.classList.add('fixed') : wrapper.classList.remove('fixed')
 }
+
