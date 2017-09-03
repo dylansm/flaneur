@@ -1,10 +1,11 @@
-<figure class="post-image{{ if .Get "zoom" }} zoombox{{ end }}">
+{{/*<figure class="post-image{{ if not .Get "zoom" }} zoombox{{ end }}">*/}}
+<figure class="post-image zoombox">
   <img
   alt="Post Image"
   sizes="(min-width: 722px) 60vw, 100vw"
-  srcset="/images/sm/{{ .Get "src" }} 640w,
-          /images/md/{{ .Get "src" }} 1280w,
-          /images/lg/{{ .Get "src" }} 2560w"
-          src="/images/md/{{ .Get "src" }}" title="{{ .Get "caption" }}">
+  srcset="/images/640/{{ .Get "src" }} 640w,
+          /images/1280/{{ .Get "src" }} 1280w,
+          /images/2560/{{ .Get "src" }} 2560w"
+          src="/images/1280/{{ .Get "src" }}" title="{{ .Get "caption" }}">
   <figcaption>{{ .Get "caption" }}</figcaption>
 </figure>

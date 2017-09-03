@@ -2,13 +2,14 @@ import { clickTouch } from './utils.js'
 
 export default class Zoombox {
   constructor () {
-    const single = document.querySelector('article.single')
-    if (single) {
-      this.figures = document.querySelectorAll('figure.post-image.zoombox')
-      if (this.figures) {
-        this.initListeners()
-      }
+    // uncomment the following to prevent zoombox in article listing pages
+    // const single = document.querySelector('article.single')
+    //  if (single) { // don't zoom on listing pages since those images will navigate to single page
+    this.figures = document.querySelectorAll('figure.post-image.zoombox')
+    if (this.figures) {
+      this.initListeners()
     }
+    // }
   }
 
   initListeners () {

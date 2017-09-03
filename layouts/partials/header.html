@@ -12,11 +12,13 @@
     <meta property="og:type" content="website" />
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/styles.css" media="all">
     <link href="https://fonts.googleapis.com/css?family=Alegreya|Montserrat" rel="stylesheet">
-    <script src="https://use.fontawesome.com/97134e2509.js"></script>
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/atom-one-dark.css">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/fontello.css">
     <script src="{{ .Site.BaseURL }}js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad()</script>
     <link rel="shortcut icon" href="{{ .Site.BaseURL }}favicon.ico">
+    {{ partial "google_analytics.html" . }}
     <title>{{ .Title }}{{ if eq .IsHome false }} | {{ .Site.Title }}{{ end }}</title>
   </head>
   <body>

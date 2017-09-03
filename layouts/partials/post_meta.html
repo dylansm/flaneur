@@ -19,7 +19,7 @@
     {{ $count := len .Params.tags }}
     {{ if gt $count 0 }}
     <div>
-      <i class="fa fa-tags fa-fw"></i>
+      <i class="icon-tags">&#xe800;</i>
       {{ range $k, $v := .Params.tags }}
         <a class="post-taxonomy-tag" href="{{ $baseUrl }}tags/{{ . | urlize }}">{{ . }}</a>{{ if lt $k (sub $count 1) }},{{ end }}
       {{ end }}

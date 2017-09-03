@@ -38,6 +38,10 @@ module.exports = {
       {
         test: /\.jpe?g$|\.gif$|\.png$|\.svg$/,
         loader: 'file-loader?name=../images/[name].[ext]'  // <-- retain original file name
+      },
+      {
+        test: /\.eot$|\.ttf$|\.woff2?$|fontello\.svg$/,
+        loader: 'file-loader?name=../fonts/[name].[ext]'  // <-- retain original file name
       }
     ]
   },

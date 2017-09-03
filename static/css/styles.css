@@ -57,6 +57,8 @@ body {
       body #wrapper #content-wrap .inner h1 a, body #wrapper #content-wrap .inner h2 a, body #wrapper #content-wrap .inner h3 a, body #wrapper #content-wrap .inner h4 a, body #wrapper #content-wrap .inner h5 a, body #wrapper #content-wrap .inner h6 a, body #wrapper #content-wrap .inner footer a, body #wrapper #content-wrap .inner nav a {
         color: #3a4c58;
         border-bottom: 1px none #3a4c58; }
+      body #wrapper #content-wrap .inner article.listing h2 a {
+        border-bottom: 1px solid #3a4c58; }
       body #wrapper #content-wrap .inner h1 {
         font-size: 1.9em;
         margin: 1.75em auto .2em auto; }
@@ -90,7 +92,8 @@ body {
       body #wrapper #content-wrap .inner header.content h1 {
         margin-top: 0; }
       body #wrapper #content-wrap .inner article footer {
-        margin-top: 1.3em; }
+        text-transform: uppercase;
+        margin-top: .5em; }
       body #wrapper #content-wrap .inner article:first-child h2 {
         margin-top: 0; }
       body #wrapper #content-wrap .inner pre {
@@ -105,6 +108,8 @@ body {
           margin-top: 0; }
       body #wrapper #content-wrap .inner .post-meta {
         margin-top: 3em; }
+        body #wrapper #content-wrap .inner .post-meta i {
+          margin-right: -.9em; }
       body #wrapper #content-wrap .inner p > img {
         width: 100%; }
       body #wrapper #content-wrap .inner figure.post-image {

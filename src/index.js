@@ -38,3 +38,16 @@ function onScroll () {
   docTop > 21 ? wrapper.classList.add('fixed') : wrapper.classList.remove('fixed')
 }
 
+// use link from header on first image in article listing
+// const listing = document.querySelectorAll('article.listing')
+// if (listing.length) {
+  // for (var article of listing) {
+    // const headerLink = article.querySelector('h2').querySelector('a').href
+    // const firstImage = article.querySelector('img')
+    // if (firstImage) {
+      // firstImage.addEventListener(clickTouch, () => {
+        // window.location.href = headerLink
+      // })
+    // }
+  // }
+// }
