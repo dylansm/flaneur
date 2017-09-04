@@ -7,5 +7,11 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser-polyfill.min.js"></script>
     <script src="{{ .Site.BaseURL }}main.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      const ua = navigator.userAgent.toLowerCase()
+      if (ua.indexOf('mobile') > 0 && ua.indexOf('safari') > 0) {
+        document.body.classList.add('ios')
+      }
+    </script>
   </body>
 </html>

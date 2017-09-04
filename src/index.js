@@ -51,3 +51,10 @@ function onScroll () {
     // }
   // }
 // }
+
+const postImages = document.querySelectorAll('figure.post-image')
+for (var fig of postImages) {
+  const caption = fig.getAttribute('data-caption')
+  const figCaption = fig.querySelector('figcaption')
+  figCaption.innerHTML = caption
+}

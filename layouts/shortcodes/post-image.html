@@ -1,11 +1,13 @@
-{{/*<figure class="post-image{{ if not .Get "zoom" }} zoombox{{ end }}">*/}}
-<figure class="post-image zoombox">
+<figure class="post-image zoombox" data-caption="{{ .Get "caption" }}">
   <img
   alt="Post Image"
+  {{ with .Get "border" }}
+  class="border"
+  {{ end }}
   sizes="(min-width: 722px) 60vw, 100vw"
   srcset="/images/640/{{ .Get "src" }} 640w,
           /images/1280/{{ .Get "src" }} 1280w,
           /images/2560/{{ .Get "src" }} 2560w"
           src="/images/1280/{{ .Get "src" }}" title="{{ .Get "caption" }}">
-  <figcaption>{{ .Get "caption" }}</figcaption>
+          <figcaption></figcaption>
 </figure>

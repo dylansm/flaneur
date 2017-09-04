@@ -2,8 +2,8 @@
 
   <header class="content">
     <h1{{ if isset .Params "screenonlytitle" }} class="screen-only"{{ end }}>{{ .Title }}</h1>
-    {{ if isset .Params "description" }}
-    <h2>{{ .Description }}</h2>
+    {{ with .Params.Description }}
+    <h2>{{ . }}</h2>
     {{ end }}
     {{ partial "post_date.html" . }}
   </header>

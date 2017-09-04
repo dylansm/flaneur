@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 
     <header class="content">
-      <h1><i class="icon-tags">&#xe800;</i> Topic: {{ .Title }}</h1>
+      <h1><i class="icon-tags"></i>Topic: {{ .Title }}</h1>
     </header>
 
     {{ range ( .Paginate (where .Data.Pages "Type" "post")).Pages }}
