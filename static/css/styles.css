@@ -1,6 +1,6 @@
 @charset "UTF-8";
 body {
-  font: 100% 'Alegreya', serif; }
+  font: 90% 'Lato', serif; }
   body h1, body h2, body h3, body h4, body .navigation li, body .pagination span {
     font-family: 'Montserrat', sans-serif;
     font-weight: normal;
@@ -85,6 +85,9 @@ body {
           font-size: 1.1em; }
       body #wrapper #content-wrap .inner .post-date + p {
         margin-top: 1.5em; }
+      body #wrapper #content-wrap .inner blockquote {
+        text-align: right;
+        font-size: 1.2em; }
       body #wrapper #content-wrap .inner ul {
         list-style: none;
         padding-left: 0; }
@@ -93,10 +96,11 @@ body {
           margin: .25em auto 0 .9em;
           text-indent: -.8em; }
           body #wrapper #content-wrap .inner ul li:before {
-            content: '\2022\A0\A0'; }
+            content: '\2022\A0\A0';
+            font-size: .8em; }
       body #wrapper #content-wrap .inner ol {
         margin-left: 0;
-        padding-left: 1.35em; }
+        padding-left: 1.5em; }
         body #wrapper #content-wrap .inner ol li {
           line-height: 1.2;
           margin-top: .25em; }
@@ -149,13 +153,14 @@ body {
           body #wrapper #content-wrap .inner figure.post-image img.border {
             border: 2px solid #b6b0a8; }
         body #wrapper #content-wrap .inner figure.post-image figcaption {
-          font: 1em "Alegreya", serif;
+          font: 1em "Lato", serif;
           text-align: center; }
   body #wrapper.nav-open #content-wrap .inner {
     transform: translate3d(-180px, 0, 0); }
   body #wrapper.resume #logos {
-    margin-top: 1em;
-    margin-bottom: 1em; }
+    margin-top: .85em; }
+    body #wrapper.resume #logos + h3 {
+      margin-top: .85em; }
   body #wrapper.resume #content-wrap .inner #logos {
     display: flex;
     align-content: center;
@@ -221,7 +226,7 @@ body {
         text-transform: none; }
       body #wrapper.resume #content-wrap .inner .date-title h4.title span.description {
         display: block;
-        font-family: "Alegreya", serif;
+        font-family: 'Lato', serif;
         font-size: .95em;
         font-weight: normal;
         padding-top: .06em;
@@ -237,7 +242,7 @@ body {
       text-transform: none; }
     body #wrapper.resume #content-wrap .inner .education h4 span.description {
       display: block;
-      font-family: "Alegreya", serif;
+      font-family: 'Lato', serif;
       font-size: .98em;
       text-transform: none; }
   body #wrapper.resume .date-title + ul {
@@ -275,9 +280,9 @@ body.ios #wrapper #content-wrap .inner .post-meta i {
   body #wrapper.nav-open #content-wrap .inner {
     transform: translate3d(0, 0, 0); }
   body #wrapper.resume #logos {
-    margin-top: .5em; }
+    margin-top: .3em; }
     body #wrapper.resume #logos + h3 {
-      margin-top: .15em; }
+      margin-top: .25em; }
     body #wrapper.resume #logos img {
       max-height: .5in;
       max-width: .5in; }
@@ -444,7 +449,7 @@ header.main {
     .navigation li#contact span {
       font-size: .9em;
       display: block;
-      font-family: 'Alegreya', serif;
+      font-family: 'Lato', serif;
       text-transform: none; }
     .navigation li#contact i {
       font-size: 1.2em;
@@ -457,7 +462,7 @@ header.main {
     border-bottom: 1px none #999; }
 
 body #wrapper #content-wrap .inner footer p#copyright {
-  font-size: 1em;
+  font-size: .85em;
   margin-top: 5em;
   margin-bottom: 2em;
   text-align: center; }

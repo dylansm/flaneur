@@ -129,6 +129,11 @@ body {
           margin-top: 1.5em;
         }
 
+        blockquote {
+          text-align: right;
+          font-size: 1.2em;
+        }
+
         ul {
           list-style: none;
           padding-left: 0;
@@ -140,6 +145,7 @@ body {
 
             &:before {
               content: '•\00a0\00a0';
+              font-size: .8em;
               // content: '»\00a0\00a0';
             }
           }
@@ -147,7 +153,7 @@ body {
 
         ol {
           margin-left: 0;
-          padding-left: 1.35em;
+          padding-left: 1.5em;
 
           li {
             line-height: 1.2;
@@ -247,7 +253,7 @@ body {
           }
 
           figcaption {
-            font: 1em "Alegreya", serif;
+            font: 1em "Lato", serif;
             text-align: center;
           }
         }
@@ -267,8 +273,11 @@ body {
 
     &.resume {
       #logos {
-        margin-top: 1em;
-        margin-bottom: 1em;
+        margin-top: .85em;
+
+        & + h3 {
+          margin-top: .85em;
+        }
       }
     }
 
@@ -367,7 +376,7 @@ body {
 
               span.description {
                 display: block;
-                font-family: "Alegreya", serif;
+                font-family: 'Lato', serif;
                 font-size: .95em;
                 font-weight: normal;
                 padding-top: .06em;
@@ -395,7 +404,7 @@ body {
 
               span.description {
                 display: block;
-                font-family: "Alegreya", serif;
+                font-family: 'Lato', serif;
                 font-size: .98em;
                 text-transform: none;
               }
@@ -472,10 +481,10 @@ body.ios #wrapper #content-wrap .inner .post-meta i {
 
       &.resume {
         #logos {
-          margin-top: .5em;
+          margin-top: .3em;
 
           & + h3 {
-            margin-top: .15em;
+            margin-top: .25em;
           }
 
           img {
@@ -529,9 +538,6 @@ body.ios #wrapper #content-wrap .inner .post-meta i {
       margin-top: 0;
     }
   }
-
-  // #content-wrap {
-  // }
 
   .screen-only {
     display: none;
