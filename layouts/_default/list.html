@@ -1,16 +1,12 @@
-<h1>LIST LIST</h1>
-<article>
-  <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+{{ partial "header.html" . }}
+  <header class="content">
+    <h1><i class="icon-tags"></i>Topic: {{ .Title }}</h1>
+  </header>
 
-  {{ partial "post_date.html" . }}
-
-  <p>
-  {{ .Summary }}
-  </p>
-
-  {{ if .Truncated }}
-  <footer>
-    <a href="{{ .RelPermalink }}">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
+  {{ range ( .Paginate (where .Data.Pages "Type" "post")).Pages }}
+    {{ .Render "summary" }}
   {{ end }}
-</article>
+
+  {{ partial "pagination.html" . }}
+{{ partial "footer.html" . }}
+

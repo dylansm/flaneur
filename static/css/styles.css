@@ -51,6 +51,9 @@ body {
       padding-top: 58px;
       transform: translate3d(0, 0, 0);
       transition: transform 250ms ease-out; }
+      body #wrapper #content-wrap .inner .inner-content {
+        margin-left: 1.6em;
+        min-height: 250px; }
       body #wrapper #content-wrap .inner a {
         color: #3a4c58;
         border-bottom: 1px solid #3a4c58; }
