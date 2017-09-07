@@ -1,19 +1,9 @@
         <ul class="navigation screen-only">
-          <li>
-            <a class="active" href="/">Home</a>
+          {{ range .Site.Menus.main }}
+          <li {{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} class="active"{{ end }}>
+              <a href="{{ .URL }}">{{ .Name }}</a>
           </li>
-          <li>
-            <a href="/about/">About</a>
-          </li>
-          <li>
-            <a href="/resume/">Résumé</a>
-          </li>
-          <li>
-            <a href="/topics/">Topics</a>
-          </li>
-          <li>
-            <a href="/values/">Values</a>
-          </li>
+          {{ end }}
           <li id="contact">
             <p>Dylan Smith<br />
               <!-- <a href="tel:+15032221442">503-222-1442</a><br /> -->

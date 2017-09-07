@@ -15,7 +15,7 @@ body {
     text-decoration: none; }
   body hr {
     border: 0;
-    border-bottom: 1px solid #e993c4;
+    border-bottom: 1px solid #F53418;
     margin: 2em auto 3.25em auto;
     max-width: 70%;
     text-align: center; }
@@ -357,7 +357,7 @@ header.main {
       font-size: 1.5rem;
       padding-top: .4em; }
       header.main .inner h1 a {
-        color: #e993c4; }
+        color: #F53418; }
 
 #wrapper.fixed header.main {
   border-bottom: 1px solid rgba(206, 207, 203, 0.6);
@@ -384,7 +384,7 @@ header.main {
     position: absolute;
     height: 5px;
     width: 100%;
-    background: #e993c4;
+    background: #F53418;
     border-radius: 9px;
     opacity: 1;
     left: 0;

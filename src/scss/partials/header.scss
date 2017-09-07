@@ -23,7 +23,7 @@ header.main {
       padding-top: .4em;
 
       a {
-        color: $pink;
+        color: $accent_color1;
       }
     }
   }
@@ -59,7 +59,7 @@ header.main {
     position: absolute;
     height: 5px;
     width: 100%;
-    background: #e993c4;
+    background: $accent_color1;
     border-radius: 9px;
     opacity: 1;
     left: 0;
