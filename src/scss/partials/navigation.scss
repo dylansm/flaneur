@@ -6,7 +6,8 @@
   font-weight: normal;
   letter-spacing: 0.05em;
   list-style-type: none;
-  margin: 0;
+  // margin: 0;
+  margin: -5px 0 0 0; // fudge the top a little so there's never any gap
   opacity: 0;
   overflow-x: hidden;
   padding: 0;

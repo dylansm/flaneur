@@ -9,7 +9,8 @@ const header = document.getElementsByTagName('header')[0]
 const wrapper = document.getElementById('wrapper')
 const burger = document.getElementById('burger-button')
 
-burger.addEventListener(clickTouch, () => {
+// burger.addEventListener(clickTouch, () => {
+burger.addEventListener('click', () => {
   wrapper.classList.contains('nav-open') ? closeNavigation() : openNavigation()
 }, false)
 
@@ -33,9 +34,22 @@ const openNavigation = () => {
 
 window.addEventListener('scroll', throttle(onScroll, 50), false)
 
+var lastScrollY = 0;
+
 function onScroll () {
   const docTop = (document.body.scrollTop || document.documentElement.scrollTop)
-  docTop > 21 ? wrapper.classList.add('fixed') : wrapper.classList.remove('fixed')
+  // docTop > 21 ? wrapper.classList.add('fixed') : wrapper.classList.remove('fixed')
+  if (docTop > 60) {
+    if (lastScrollY > docTop) {
+      wrapper.classList.add('reveal')
+    } else {
+      wrapper.classList.remove('reveal')
+    }
+    wrapper.classList.add('fixed')
+  } else {
+    wrapper.classList.remove('fixed')
+  }
+  lastScrollY = docTop
 }
 
 // use link from header on first image in article listing

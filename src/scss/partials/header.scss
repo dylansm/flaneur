@@ -33,9 +33,19 @@ header.main {
   header.main {
     border-bottom: 1px solid $header-border-vis;
     position: fixed;
-    top: -22px;
+    // top: -22px; // always visible
+    top: -84px; // autohide
+    // transition: transform 0.3s;
+    transition: top 0.3s;
     width: 100%;
     z-index: 1;
+  }
+
+  &.reveal {
+    header.main {
+      // transform: translate3d(0, 60px, 0)
+      top: -24px;
+    }
   }
 }
 
