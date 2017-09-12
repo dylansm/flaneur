@@ -44,9 +44,15 @@ function onScroll () {
     if (lastScrollY > docTop) {
       wrapper.classList.add('reveal')
       window.clearTimeout(timeoutHideHeader)
-      timeoutHideHeader = window.setTimeout(() => { wrapper.classList.remove('reveal') }, 2000)
+      timeoutHideHeader = window.setTimeout(() => {
+        if (!wrapper.classList.contains('nav-open')) {
+          wrapper.classList.remove('reveal')
+        }
+      }, 2000)
     } else {
-      wrapper.classList.remove('reveal')
+      if (!wrapper.classList.contains('nav-open')) {
+        wrapper.classList.remove('reveal')
+      }
     }
     wrapper.classList.add('fixed')
   } else {
