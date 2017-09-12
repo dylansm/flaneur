@@ -35,6 +35,7 @@ const openNavigation = () => {
 window.addEventListener('scroll', throttle(onScroll, 50), false)
 
 var lastScrollY = 0;
+var timeoutHideHeader;
 
 function onScroll () {
   const docTop = (document.body.scrollTop || document.documentElement.scrollTop)
@@ -42,6 +43,8 @@ function onScroll () {
   if (docTop > 60) {
     if (lastScrollY > docTop) {
       wrapper.classList.add('reveal')
+      window.clearTimeout(timeoutHideHeader)
+      timeoutHideHeader = window.setTimeout(() => { wrapper.classList.remove('reveal') }, 2000)
     } else {
       wrapper.classList.remove('reveal')
     }

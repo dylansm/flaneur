@@ -375,7 +375,7 @@ header.main {
   border-bottom: 1px solid rgba(206, 207, 203, 0.6);
   position: fixed;
   top: -84px;
-  transition: top 0.3s;
+  transition: top 0.5s;
   width: 100%;
   z-index: 1; }
 
