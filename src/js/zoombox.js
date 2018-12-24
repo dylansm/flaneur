@@ -13,8 +13,8 @@ export default class Zoombox {
   }
 
   initListeners () {
-    document.addEventListener('keyup', (e) => {
-      if (e.keyCode === 27) {
+    document.addEventListener('keypress', (e) => {
+      if (e.keyCode === 27 || e.keyCode === 85) {
         this.closeZoombox()
       }
     }, false)
