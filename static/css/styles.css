@@ -190,15 +190,14 @@ body {
       max-width: 4em;
       margin-top: 1em;
       margin-bottom: 1em;
-      padding-left: 1.8em;
-      padding-right: 1.8em; }
-      body #wrapper.resume #content-wrap .inner #logos img:nth-child(11) {
-        padding-left: 1.1em;
-        padding-right: 2.7em; }
-      @media (min-width: 576px) {
-        body #wrapper.resume #content-wrap .inner #logos img:nth-child(11) {
-          padding-left: 1.8em;
-          padding-right: 1.8em; } }
+      padding-left: 1.3em;
+      padding-right: 1.3em; }
+      body #wrapper.resume #content-wrap .inner #logos img.hp {
+        margin-right: -.5%; }
+      body #wrapper.resume #content-wrap .inner #logos img.nike {
+        margin-right: -3%; }
+      body #wrapper.resume #content-wrap .inner #logos img.adobe {
+        margin-right: -1.5%; }
       @media screen and (min-width: 564px) and (max-width: 688px) {
         body #wrapper.resume #content-wrap .inner #logos img {
           padding-left: 1em;
@@ -207,9 +206,6 @@ body {
         body #wrapper.resume #content-wrap .inner #logos img {
           margin-top: 0;
           margin-bottom: 0; } }
-      body #wrapper.resume #content-wrap .inner #logos img:first-child, body #wrapper.resume #content-wrap .inner #logos img:nth-child(2) {
-        max-width: 4.25em;
-        padding-right: .5em; }
       @media (min-width: 1px) {
         body #wrapper.resume #content-wrap .inner #logos img.tall {
           padding-right: 2.25em; } }
